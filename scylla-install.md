@@ -194,3 +194,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 cd ~/
 git clone https://github.com/im-bravo/scylla-docker-compose.git
 
+cd ~/scylla-docker-compose/
+git pull
+
+dc up -d scylla-seed
