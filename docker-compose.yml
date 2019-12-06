@@ -13,7 +13,6 @@ services:
         - 7000:7000
         - 7001:7001
         - 7199:7199
-        - 7199:7199
   scylla-node01:
     image: scylladb/scylla
     volumes:
@@ -26,7 +25,6 @@ services:
         - 7000:7000
         - 7001:7001
         - 7199:7199
-        - 7199:7199
   scylla-node02:
     image: scylladb/scylla
     volumes:
@@ -38,5 +36,4 @@ services:
         - 9160:9160
         - 7000:7000
         - 7001:7001
-        - 7199:7199
         - 7199:7199
