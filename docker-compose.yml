@@ -1,0 +1,42 @@
+version: '3'                                                              
+
+services:
+  scylla-seed:
+    image: scylladb/scylla
+    volumes:
+      - ./scylla-seed.yaml:/etc/scylla/scylla.yaml
+      - ./cassandra-rackdc_seed.properties:/etc/scylla/cassandra-rackdc_seed.properties
+    ports:
+        - 10000:10000
+        - 9042:9042
+        - 9160:9160
+        - 7000:7000
+        - 7001:7001
+        - 7199:7199
+        - 7199:7199
+  scylla-node01:
+    image: scylladb/scylla
+    volumes:
+      - ./scylla-node01.yaml:/etc/scylla/scylla.yaml
+      - ./cassandra-rackdc_node01.properties:/etc/scylla/cassandra-rackdc_seed.properties
+    ports:
+        - 10000:10000
+        - 9042:9042
+        - 9160:9160
+        - 7000:7000
+        - 7001:7001
+        - 7199:7199
+        - 7199:7199
+  scylla-node02:
+    image: scylladb/scylla
+    volumes:
+      - ./scylla-node02.yaml:/etc/scylla/scylla.yaml
+      - ./cassandra-rackdc_node02.properties:/etc/scylla/cassandra-rackdc_seed.properties
+    ports:
+        - 10000:10000
+        - 9042:9042
+        - 9160:9160
+        - 7000:7000
+        - 7001:7001
+        - 7199:7199
+        - 7199:7199
